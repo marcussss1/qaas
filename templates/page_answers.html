@@ -1,0 +1,25 @@
+{% extends "inc/base.html" %}
+{% load static %}
+
+{% block content %}
+    {% include "inc/one_question.html" %}
+    {% for answer in page_obj %}
+        {% include "inc/answer.html" %}
+    {% endfor %}
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <button type="button" class="btn btn-primary btn-lg avatar-settings"
+            style="margin-top: 30px;">Answer
+    </button>
+{% endblock content %}
+{% block paginator %}
+    <div style="margin-top: 40px;"></div>
+    {% include "inc/paginator.html" %}
+{% endblock %}
+{% block side_panel %}
+    {% include "inc/tags.html" %}
+    {% include "inc/best_members.html" %}
+{% endblock side_panel %}
+

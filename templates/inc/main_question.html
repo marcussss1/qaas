@@ -1,0 +1,46 @@
+{% load static %}
+
+<div class="question">
+    <div class="row">
+        <div class="col-3">
+            <img class="avatar" style="width: 140px; height: 140px;" src="{% static "img/abc.jpg" %}" alt="">
+        </div>
+        <div class="col-9">
+            <h1> {{ question.title }}</h1>
+            {{ question.text }}
+            <div>
+                <div style="margin-top: 40px;">
+                    Tags: &nbsp;&nbsp;&nbsp;
+                    {% if question.tag_names.tag1 != '-' %}
+                        <a href="/tags/{{ question.tag_names.tag1 }}">{{ question.tag_names.tag1 }}</a> &nbsp;&nbsp;
+                    {% endif %}
+                    {% if question.tag_names.tag2 != '-' %}
+                        <a href="/tags/{{ question.tag_names.tag2 }}">{{ question.tag_names.tag2 }}</a> &nbsp;&nbsp;
+                    {% endif %}
+                    {% if question.tag_names.tag3 != '-' %}
+                        <a href="/tags/{{ question.tag_names.tag3 }}">{{ question.tag_names.tag3 }}</a> &nbsp;&nbsp;
+                    {% endif %}
+                    {% if question.tag_names.tag4 != '-' %}
+                        <a href="/tags/{{ question.tag_names.tag4 }}">{{ question.tag_names.tag4 }}</a> &nbsp;&nbsp;
+                    {% endif %}
+                    {% if question.tag_names.tag5 != '-' %}
+                        <a href="/tags/{{ question.tag_names.tag5 }}">{{ question.tag_names.tag5 }}</a> &nbsp;&nbsp;
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="border: 2px solid gray; margin-bottom: 25px"></div>
+{% for i in '.'|rjust:question.counting_answers %}
+    {% include "inc/answer.html" %}
+{% endfor %}
+<div style="border: 2px solid gray; margin-bottom: 25px"></div>
+<form>
+    <div class="form-group">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+</form>
+<button type="submit" class="btn btn-primary">Answer!</button>
+

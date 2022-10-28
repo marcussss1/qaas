@@ -1,0 +1,23 @@
+{% load static %}
+
+<div class="question">
+    <div class="row">
+        <div class="col-2">
+            <div class="avatar">
+                <img src="{% static "img/abc.jpg" %}" alt="">
+            </div>
+        </div>
+        <div class="col-8">
+            <a href="/question/{{ question.id_question }}"><h3>{{ question.title_question }}</h3></a>
+            <p style="word-break: break-all;">{{ question.text_question }}</p>
+            <a style="margin-right: 20px; " href="/answers/{{ question.id_question }}">answers
+                ({{ question.counting_answers }})</a>
+            Tags:&nbsp;&nbsp;&nbsp;
+            {% for tag in tags %}
+                {% if question.id_question == tag.id_question.id_question %}
+                    <a href="/tags/{{ tag.name_tag }}">{{ tag.name_tag }}</a> &nbsp;&nbsp;
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

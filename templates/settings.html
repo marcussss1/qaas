@@ -1,0 +1,55 @@
+{% extends "inc/base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1>Settings: Litvak D.A.</h1>
+    <form>
+        <div class="col-4">
+            <h5>
+                <div class="mb-3" style="margin-top: 20px;">
+                    <label for="exampleInputEmail1" class="form-label">Login</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1"
+                           aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3" style="margin-top: 20px;">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1"
+                           aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3" style="margin-top: 20px;">
+                    <label for="exampleInputEmail1" class="form-label">Nickname</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1"
+                           aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3" style="margin-top: 20px;">
+                    <label for="exampleInputEmail1" class="form-label">Upload avatar</label>
+                </div>
+                <div class="col-3 avatar-settings">
+                    <img class="avatar-img" src="../static/img/duck.png" alt="">
+                </div>
+                <div class="col-5" style="margin-top: 30px;">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg avatar-settings"
+                            style="margin-top: 30px;">Save
+                    </button>
+                </div>
+            </h5>
+        </div>
+    </form>
+{% endblock content %}
+
+{# question_page.html #}
+{#{% extends "inc/base.html" %}#}
+{#{% load static %}#}
+{##}
+{#{% block content %}#}
+{#    <h1>1111</h1>#}
+{#    {% include "inc/question.html" %}#}
+{#{% endblock content %}#}
+{##}
+{#{% block side_panel %}#}
+{#    {% include "inc/tags.html" %}#}
+{#    {% include "inc/best_members.html" %}#}
+{#{% endblock side_panel %}#}

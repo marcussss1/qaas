@@ -1,0 +1,134 @@
+{% extends "inc/base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block content %}
+    <h1>Registration</h1>
+    <div class="col-4">
+        <form novalidate class="form mt-5" action="/login/registration/" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+                <button style="margin-top: 20px;" type="submit" class="btn btn-primary">Save!</button>
+            {% endbuttons %}
+        </form>
+    </div>
+    {#    <form>#}
+    {#        <div class="col-4">#}
+    {#            <form novalidate class="form mt-5" action="/registration/" method="post">#}
+    {#                {% csrf_token %}#}
+    {#                {% bootstrap_form form %}#}
+    {#                {% buttons %}#}
+    {#                    <button style="margin-top: 20px;" type="submit" class="btn btn-primary">Submit</button>#}
+    {#                {% endbuttons %}#}
+    {#                <div class="create-new-account-settings" style="margin-top: 10px;">#}
+    {#                    <a href="registration/">Create new account</a>#}
+    {#                </div>#}
+    {#            </form>#}
+    {#        </div>#}
+
+
+{#    <div class="col-4">#}
+{#        <h5>#}
+{#            <div class="mb-3" style="margin-top: 20px;">#}
+{#                <label for="exampleInputEmail1" class="form-label">Login</label>#}
+{#                <input type="email" class="form-control" id="exampleInputEmail1"#}
+{#                       aria-describedby="emailHelp">#}
+{#            </div>#}
+{#            <div class="mb-3" style="margin-top: 20px;">#}
+{#                <label for="exampleInputEmail1" class="form-label">Email</label>#}
+{#                <input type="email" class="form-control" id="exampleInputEmail1"#}
+{#                       aria-describedby="emailHelp">#}
+{#            </div>#}
+{#            <div class="mb-3" style="margin-top: 20px;">#}
+{#                <label for="exampleInputEmail1" class="form-label">Nickname</label>#}
+{#                <input type="email" class="form-control" id="exampleInputEmail1"#}
+{#                       aria-describedby="emailHelp">#}
+{#            </div>#}
+{#            <div class="mb-3" style="margin-top: 20px;">#}
+{#                <label for="exampleInputEmail1" class="form-label">Password</label>#}
+{#                <input type="password" name="password" class="form-control" id="exampleInputEmail1"#}
+{#                       aria-describedby="emailHelp">#}
+{#            </div>#}
+{#            <div class="mb-3" style="margin-top: 20px;">#}
+{#                <label for="exampleInputEmail1" class="form-label">Repeat password</label>#}
+{#                <input type="password" name="password" class="form-control" id="exampleInputEmail1"#}
+{#                       aria-describedby="emailHelp">#}
+{#            </div>#}
+{#            <div class="mb-3" style="margin-top: 20px;">#}
+{#                <label for="exampleInputEmail1" class="form-label">Upload avatar</label>#}
+{#            </div>#}
+{#            <div class="col-3 avatar-settings">#}
+{#                <img class="avatar-img" src="../static/img/duck.png" alt="">#}
+{#            </div>#}
+{#            <div class="col-5" style="margin-top: 30px;">#}
+{#                <div class="custom-file">#}
+{#                    <input type="file" class="custom-file-input" id="customFile">#}
+{#                </div>#}
+{#                <button type="button" class="btn btn-primary btn-lg avatar-settings"#}
+{#                        style="margin-top: 30px;">Register!#}
+{#                </button>#}
+{#            </div>#}
+{#        </h5>#}
+{#    </div>#}
+    </form>
+{% endblock content %}
+
+
+
+
+
+
+
+
+{#{% extends "inc/base.html" %}#}
+{#{% load static %}#}
+{##}
+{#{% block content %}#}
+{#    <h1>Registration</h1>#}
+{#    <form>#}
+{#        <div class="col-4">#}
+{#            <h5>#}
+{#                <div class="mb-3" style="margin-top: 20px;">#}
+{#                    <label for="exampleInputEmail1" class="form-label">Login</label>#}
+{#                    <input type="email" class="form-control" id="exampleInputEmail1"#}
+{#                           aria-describedby="emailHelp">#}
+{#                </div>#}
+{#                <div class="mb-3" style="margin-top: 20px;">#}
+{#                    <label for="exampleInputEmail1" class="form-label">Email</label>#}
+{#                    <input type="email" class="form-control" id="exampleInputEmail1"#}
+{#                           aria-describedby="emailHelp">#}
+{#                </div>#}
+{#                <div class="mb-3" style="margin-top: 20px;">#}
+{#                    <label for="exampleInputEmail1" class="form-label">Nickname</label>#}
+{#                    <input type="email" class="form-control" id="exampleInputEmail1"#}
+{#                           aria-describedby="emailHelp">#}
+{#                </div>#}
+{#                <div class="mb-3" style="margin-top: 20px;">#}
+{#                    <label for="exampleInputEmail1" class="form-label">Password</label>#}
+{#                    <input type="password" name="password" class="form-control" id="exampleInputEmail1"#}
+{#                           aria-describedby="emailHelp">#}
+{#                </div>#}
+{#                <div class="mb-3" style="margin-top: 20px;">#}
+{#                    <label for="exampleInputEmail1" class="form-label">Repeat password</label>#}
+{#                    <input type="password" name="password" class="form-control" id="exampleInputEmail1"#}
+{#                           aria-describedby="emailHelp">#}
+{#                </div>#}
+{#                <div class="mb-3" style="margin-top: 20px;">#}
+{#                    <label for="exampleInputEmail1" class="form-label">Upload avatar</label>#}
+{#                </div>#}
+{#                <div class="col-3 avatar-settings">#}
+{#                    <img class="avatar-img" src="../static/img/duck.png" alt="">#}
+{#                </div>#}
+{#                <div class="col-5" style="margin-top: 30px;">#}
+{#                    <div class="custom-file">#}
+{#                        <input type="file" class="custom-file-input" id="customFile">#}
+{#                    </div>#}
+{#                    <button type="button" class="btn btn-primary btn-lg avatar-settings"#}
+{#                            style="margin-top: 30px;">Register!#}
+{#                    </button>#}
+{#                </div>#}
+{#            </h5>#}
+{#        </div>#}
+{#    </form>#}
+{#{% endblock content %}#}

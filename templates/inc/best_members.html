@@ -1,0 +1,10 @@
+<h1 style="margin-top: 50px">Best Members</h1>
+<div style="border: 2px solid gray;">
+    <h4>
+        {% for best_member in best_members %}
+            <div style="margin-top: 15px">
+                <a href="#">{{ best_member.nickname }}</a>
+            </div>
+        {% endfor %}
+    </h4>
+</div>

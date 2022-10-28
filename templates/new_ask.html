@@ -1,0 +1,35 @@
+{% extends "inc/base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1>New question</h1>
+    <div class="row">
+        <div class="col-8">
+            <form>
+                <div class="col-8">
+                    <h5>
+                        <div class="mb-3" style="margin-top: 20px;">
+                            <label for="exampleInputEmail1" class="form-label">Title</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                   aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Text</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="questionTags" class="form-label">Tags</label>
+                            <input type="text" class="form-control" id="questionTags" aria-describedby="emailHelp">
+                        </div>
+                        <button type="submit" class="btn btn-primary">ASK!</button>
+                    </h5>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block side_panel %}
+    {% include "inc/tags.html" %}
+    {% include "inc/best_members.html" %}
+{% endblock side_panel %}

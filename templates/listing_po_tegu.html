@@ -1,0 +1,21 @@
+{% extends "inc/base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1 style="margin-bottom: 20px;">Tag: &nbsp;&nbsp;{{ find_tag }}</h1>
+    {% for question in page_obj %}
+        {% include "inc/question.html" %}
+    {% endfor %}
+{% endblock content %}
+{% block paginator %}
+    <div style="margin-top: 40px;"></div>
+    {% include "inc/paginator.html" %}
+{% endblock %}
+{% block side_panel %}
+    {% include "inc/tags.html" %}
+    {% include "inc/best_members.html" %}
+{% endblock side_panel %}
+
+
+
+

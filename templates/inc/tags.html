@@ -1,0 +1,10 @@
+<h1>Popular tags</h1>
+<div style="border: 2px solid gray;">
+    <h3>
+        {% for name_tag in best_tags %}
+            <div>
+                <a href="/tags/{{ name_tag }}" style="text-decoration:none; color: #6a1a21;">{{ name_tag }}</a>
+            </div>
+        {% endfor %}
+    </h3>
+</div>
